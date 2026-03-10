@@ -1,0 +1,33 @@
+Options +FollowSymLinks
+RewriteEngine on
+Options +FollowSymLinks
+
+RewriteRule ^sayfa/([0-9a-zA-Z-_]+)  sayfa.php?sef=$1 [L,QSA]
+RewriteRule ^hizmet/([0-9a-zA-Z-_]+)  hizmet-detay.php?sef=$1 [L,QSA]
+RewriteRule ^blog/([0-9a-zA-Z-_]+)  blog-detay.php?sef=$1 [L,QSA]
+RewriteRule ^urun/([0-9a-zA-Z-_]+)  urun.php?sef=$1 [L,QSA]
+RewriteRule ^projeler/([0-9a-zA-Z-_]+)  projeler.php?sef=$1 [L,QSA]
+RewriteRule ^kategori/([0-9a-zA-Z-_]+)  kategori.php?sef=$1 [L,QSA]
+RewriteRule ^urun-kategori/([0-9a-zA-Z-_]+)  urunler.php?sef=$1 [L,QSA]
+RewriteRule ^bolge/([0-9a-zA-Z-_]+)  bolge.php?sef=$1 [L,QSA]
+RewriteRule ^proje/([0-9a-zA-Z-_]+)  proje.php?sef=$1 [L,QSA]
+RewriteRule ^oda/([0-9a-zA-Z-_]+)  oda.php?sef=$1 [L,QSA]
+RewriteRule ^ekibimiz$ ekibimiz.php [L,NC]
+RewriteRule ^sss$ sss.php [L,NC]
+RewriteRule ^menu$ menu.php [L,NC]
+RewriteRule ^paketler$ paketler.php [L,NC]
+RewriteRule ^hizmetler$ hizmetler.php [L,NC]
+RewriteRule ^galeri$ galeri.php [L,NC]
+RewriteRule ^iletisim$ iletisim.php [L,NC]
+RewriteRule ^rezervasyon$ rezervasyon.php [L,NC]
+RewriteRule ^iletildi$ iletildi.php [L,NC]
+RewriteRule ^blog$ blog.php [L,NC]
+RewriteRule ^odalar$ odalar.php [L,NC]
+
+
+#Gzip
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
+#End Gzip
+

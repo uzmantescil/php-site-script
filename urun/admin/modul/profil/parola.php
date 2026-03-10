@@ -1,0 +1,65 @@
+<?php $data_edit=$db->fetch_single_row('sys_users','id',$_SESSION['id_user']);?>
+ 
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                      Parolamı Değiştir
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
+                        <li><a href="<?=base_index();?>profil">Profil</a></li>
+                        <li class="active">Parolamı Değiştir</li>
+                    </ol>
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box box-primary">
+                                <div class="box-header">
+                                </div><!-- /.box-header -->
+
+                  <div class="box-body">
+                   <div class="alert alert-danger pass_salah" style="display:none">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong></strong> 
+        </div>
+                    <form id="pass_up" method="post" class="form-horizontal" action="<?=base_admin();?>modul/parola/islemler.php?act=up">
+                        <div class="form-group">
+                        <label for="Password Baru" class="control-label col-lg-2">Şimdiki Parola</label>
+                        <div class="col-lg-10">
+                          <input type="password" id="password" name="password" class="form-control" > 
+                        </div>
+                      </div><!-- /.form-group -->
+                      <div class="form-group">
+                        <label for="Password Baru" class="control-label col-lg-2">Yeni Parola</label>
+                        <div class="col-lg-10">
+                          <input type="password" id="password_baru" name="password_baru"  class="form-control" > 
+                        </div>
+                      </div><!-- /.form-group -->
+                       <div class="form-group">
+                        <label for="Password Baru" class="control-label col-lg-2">Parolayı Onayla!</label>
+                        <div class="col-lg-10">
+                          <input type="password" id="password_confirm" name="password_confirm" class="form-control" > 
+                        </div>
+                      </div><!-- /.form-group -->
+
+                      <input type="hidden" name="id" value="<?=$_SESSION['id_user'];?>">
+                      <div class="form-group">
+                        <label for="tags" class="control-label col-lg-2">&nbsp;</label>
+                        <div class="col-lg-10">
+                          <input type="submit" class="btn btn-primary" value="Değişiklikleri Kaydet">
+                        </div>
+                      </div><!-- /.form-group -->
+                    </form>
+                    <a href="<?=base_index();?>profil" class="btn btn-success">Önceki Sayfa</a>
+          
+                  </div>
+                  </div>
+              </div>
+</div>
+                  
+                </section><!-- /.content -->
+        
+ 
